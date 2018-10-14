@@ -1,4 +1,4 @@
-# kubernetes-for-china
+# kubernetes-for-china with a minior modifications
 
  With Kubernetes v1.12.1
 
