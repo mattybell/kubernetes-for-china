@@ -1,18 +1,22 @@
-# kubernetes-for-china with a minior modifications
+# kubernetes-for-china baremetal on ubuntu bionic
 
  With Kubernetes v1.12.1
 
 ## Kubernetes Install
 
-1. Install Docker
+1. Install Docker, turn off swipe and commment out swap entry from your fstab
 
 - [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ```bash
-$ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+sudo su
+swapoff -a 
+vi /etc/fstab
+#/swap 
+apt install docker.io
 ```
 
-2. Installing kubeadm, kubelet and kubectl
+2. Installing kubeadm, kubelet and kubectl since the bionic is not yet available we will be using xenial repos
 
 - [install kubeadm](https://kubernetes.io/docs/setup/independent/install-kubeadm/)
 - [Kubernetes mirror](https://opsx.alibaba.com/mirror)
