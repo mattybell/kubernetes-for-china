@@ -13,7 +13,7 @@ sudo su
 swapoff -a 
 vi /etc/fstab
 #/swap 
-apt install docker.io
+curl -fsSL https://get.docker.com | bash -s docker
 ```
 
 2. Installing kubeadm, kubelet and kubectl since the bionic is not yet available we will be using xenial repos
